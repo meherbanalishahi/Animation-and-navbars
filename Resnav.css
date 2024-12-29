@@ -22,14 +22,24 @@ nav{
     text-decoration: none;
     text-transform: capitalize;
     color: #fff;
+    position: relative;
 
 
 }
-.navbar a:hover, .navbar .active{
-    color: rgb(20, 238, 20);
-    border-bottom: 2px solid white;
-
+.navbar a::after{
+content: '';
+position: absolute;
+right: 0;
+bottom: 0;
+width: 0;
+height: 8px;
+transition: width 0.8s linear;
 }
+.navbar a:hover::after{ 
+    width: 100%;
+    border-bottom:3px solid rgb(240, 166, 8);
+}
+
 .logo{
     font-size: 24px;
     margin-left:13px;
