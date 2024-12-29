@@ -27,6 +27,7 @@ padding: 15px 20px;
 .navbar{
     display: flex;
     align-items: center;
+
 }
 .navbar a{
     text-decoration: none;
@@ -36,13 +37,26 @@ padding: 15px 20px;
     font-size: 22px;
     text-decoration: none;
     text-transform: capitalize;
+    position: relative;
 }
-.navbar a:hover, .navbar .active{
-   color: rgb(74, 230, 27);
-    border-bottom: 2px solid rgb(219, 4, 4);
-    font-weight: 900;
+.navbar a::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    bottom: 0;
+    right: 0;
+    height: 4px;
+    transition: width 0.7s linear;
+
+}
+.navbar a:hover::after{
+  
+    border-bottom: 3px solid rgb(241, 185, 1);
+width: 100%;    
     
-    /* padding: 17px 30px; */
+}
+.navbar a:hover{
+    color: rgb(62, 253, 177);
 }
 .icons{ 
     font-size: 30px;
