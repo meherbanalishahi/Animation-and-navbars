@@ -1,0 +1,308 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background-color: orange;
+
+   
+
+}
+nav{ 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    width: 100%;
+}
+.logo{
+    font-size: 25px;
+    color: red;
+    text-transform: uppercase;
+    border-left: 3px solid white;
+}
+
+
+.navbar a{
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    margin-left: 50px;
+text-transform: capitalize; 
+position: relative;
+   
+   
+}
+.navbar a::after{
+    content: '';
+    width: 0;
+    bottom: -3px;
+    right: -3px;
+    height:100% ;
+    position: absolute;
+    transition: 0.7s linear;
+}
+.navbar a:hover::after{
+    width: 100%;
+    border: 3px solid #fff;
+    text-align: center;
+}
+.search{
+    position: relative;
+
+}
+.search input{
+    padding: 4px 25px;
+    color: rebeccapurple;
+    cursor: pointer;
+    border: none;
+    /
+    
+}
+.search i{
+    position: absolute;
+    left: 0;
+    top:5.5px;
+    text-align: center;
+    padding-left: 4px;
+
+
+
+}
+/* style of main  */
+main{
+background-image: url('./images/bed-4416515_1280.jpg');
+background-position: center;   
+background-repeat: no-repeat;
+background-size:cover;
+
+ height: 50vh;
+ width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.head{
+    font-size: 30px;
+    text-transform: uppercase;
+    font-style: bold;
+    color: rgb(0, 0, 0);
+    letter-spacing: 2px;
+    position: relative;
+    animation: head 3s linear infinite;
+    text-align: center;
+    
+    
+}
+@keyframes head{
+    0%{
+        transform: translateY(0);
+        color: #fff;
+    }
+    40%{
+        color: aqua;
+    }
+    50%{
+        transform: translateY(120px);
+        color: black;
+    }
+    70%{
+        color: blue;
+    }
+    100%{
+        color: red;
+        transform: translateY(0%);
+    }
+}
+section{
+    
+    height: 30vh;
+}
+.header{
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 30px;
+    color: gray;
+    text-transform: capitalize;
+}
+.container{
+
+display: flex;
+justify-content: space-around;
+align-items: center;
+
+}
+.card img{
+ 
+   height: 34vh;
+   padding: 12px 0px;
+
+    
+}
+
+.para{
+    text-align: center;
+    gap: 30px;
+}
+.para h1{
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+
+}
+.para p{
+    width: 500px;
+    text-align: justify;
+    font-size: 16px;
+
+}
+.btn{
+    width: 65px;
+    height: 35px;
+    margin-top: 16px;
+    padding: 0px 16px;
+    background-color: orange;
+    text-transform: capitalize;
+    color: #fff;
+    cursor: pointer;
+    transition: 1s;
+    border: none;
+
+}
+.btn:hover{
+    background-color: rgb(173, 128, 45);
+    transform:scale(1.4);
+}
+/* style section2 */
+.container2{
+    
+    height: 60vh;
+
+}
+
+.servicecard{
+    display: flex;
+
+    justify-content: center;
+    margin-top: 12px;
+    height: 50vh;
+    gap: 25px;
+
+}
+
+.card2{
+    text-align: center;
+    /* margin-top: 30px; */
+    /* margin-left: 15px; */
+    gap: 24px;
+    
+}
+.card2 img{
+    height: 30vh;
+}
+.card2 h2{
+    font-size: 20px;
+    font-style: italic;
+}
+.card2 p{
+    font-size: 24px;
+    margin-top: 4px;
+}
+.card2 .btn2{
+    width: 80px;
+    height: 35px;
+    margin-top: 10px;
+    padding: 0px 16px;
+    background-color: orange;
+    text-transform: capitalize;
+    color: #fff;
+    cursor: pointer;
+    transition: 1s;
+    border: none;
+
+}
+.card2 .btn2:hover{
+    background-color: rgb(173, 128, 45);
+    transform:scale(1.4);
+
+}
+footer{
+    background-color: orange;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    
+    
+}
+.foot{
+text-align: center;    
+}
+.foot p{
+    font-size: 25px;
+    color: #ffffff;
+    font-style: italic;
+}
+.foot i{
+    font-size: 25px;
+    transition: 1s;
+    border-radius: 50%;
+    margin: 12px 16px;
+    padding: 8px;
+    cursor: pointer;
+}
+.foot i:hover{
+    transform: scale(1.3);
+    background-color: rgb(251, 251, 251);
+    color: blue;
+    
+    
+}
+
+@media (max-width:800px){
+    
+        nav a{ 
+            display:none ;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px;
+            width: 100%;
+        }
+    
+}
+@media(max-width:950px){
+    .container{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        
+        }
+    .container2{
+        height: auto; /* Use 'auto' instead of '100%' to allow it to adjust based on content */
+    padding: 10px; /* Add some padding for better spacing */
+    /* overflow: hidden;  */
+    }
+    .servicecard{
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        justify-content: center;
+        align-items: center; /* Center items horizontally */
+        margin-top: 12px;
+        height: auto; /* Use 'auto' for height so it adjusts based on content */
+        gap: 25px; /* Maintain spacing between items */
+        padding: 15px; /* Add padding for better layout */
+        /* box-sizing: border-box; Ensure padding doesn’t affect width/height */
+        width: 100%;
+
+} }
+
+    
+
+    
+
+   

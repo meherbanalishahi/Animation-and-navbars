@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cards</title>
+    <style>
+        body{
+            background-color: black;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+        .cards{
+            background-color: aliceblue;
+            width: 300px;
+            height: 200px;
+            padding: 20px;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(27, 192, 57, 0.2);
+            animation-name: spin;
+            animation-duration: 3s;
+            animation-iteration-count: 3;
+        animation-direction: calc(360deg);
+        
+            
+        }
+        @keyframes spin{
+            0%{
+              transform: translateY(0);
+
+            }
+           
+            50%{
+                transform:translateY(20%);
+            }
+            100%{
+                transform: translateY(0);
+                
+            }
+
+ 
+        }
+        .cards::after ,.cards::before{
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 50%;
+            background-image: linear-gradient(red, rgb(35, 35, 255),yellow,rgb(36, 255, 240) );
+            top: 50%;
+            translate: -50% -50%;
+            z-index:-1;
+            padding: 5px;
+            
+        
+            
+        }
+        .cards::before{
+            filter: blur(2rem);
+           
+        }
+    </style>
+  </head>
+  <body>
+    <div class="cards">
+      <h1>animation card</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa debitis,
+        harum id, ex aut reiciendis reprehenderit nobis beatae, vitae delectus
+        aliquam nisi quo. Fugit asperiores quidem, cupiditate maxime tempore
+        nemo?
+      </p>
+    </div>
+  </body>
+</html>
