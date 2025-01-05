@@ -280,7 +280,7 @@ text-align: center;
             width: 100%;
         }
         .icons{
-            display: flex;
+            display: block;
         }
         .para p{
             width: 300px;
