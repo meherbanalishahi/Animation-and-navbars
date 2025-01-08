@@ -278,19 +278,7 @@ text-align: center;
 
 
 @media (max-width:800px){
-    .showData{
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center;
-        justify-content: center;
-        position:absolute;
-        background-color: gray;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        padding-right: 16px;
-        gap: 16px;
-    }
+   
     
         nav a{ 
             display:none ;
@@ -303,6 +291,24 @@ text-align: center;
             display: block !important;
             font-size: 30px;
         }
+        .showData{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: auto;
+          
+            align-content: center;
+            justify-content: center;
+            position:absolute;
+            background-color: gray;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            padding-right: 16px;
+            gap: 16px;
+            transition: all 0.5s ease;
+        }
+    
         
         
     
@@ -352,7 +358,7 @@ text-align: center;
     width: 250px;
     text-align: justify;
     font-size: 16px;}
-
+    
 }
 
 

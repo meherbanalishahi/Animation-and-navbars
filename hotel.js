@@ -1,10 +1,10 @@
 const icon=document.getElementById('troggle')
 
 
-const navbar=document.getElementById('menu')
+const bar=document.getElementById('menu')
     icon.addEventListener('click',()=>{
-        navbar.classList.toggle('showData')
-        console.log(navbar);
+        bar.classList.toggle('showData')
+        console.log(bar);
         
     })
 
