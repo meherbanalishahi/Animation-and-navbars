@@ -38,15 +38,16 @@ position: relative;
 .navbar a::after{
     content: '';
     width: 0;
-    bottom: -3px;
-    right: -3px;
+    bottom:0;
+    right:0;
     height:100% ;
     position: absolute;
-    transition: 0.7s linear;
+
+    transition: 0.3s ease-in;
 }
 .navbar a:hover::after{
     width: 100%;
-    border: 3px solid #fff;
+    border-bottom: 3px solid white;
     text-align: center;
 }
 .search{
@@ -278,12 +279,14 @@ text-align: center;
 
 
 @media (max-width:800px){
-    nav a{ 
+    .navbar a{ 
         display:none ;
         align-items: center;
         justify-content: space-between;
-        padding: 16px;
-        width: 100%;
+        padding: 20px 0px;
+        position: relative;
+    
+    
     }
    
     
@@ -292,22 +295,38 @@ text-align: center;
             display: block !important;
             font-size: 30px;
         }
+        .showData a{
+            display:flex;
+            flex-direction: column;
+           padding: 4px;
+           margin-top: 23px;
+            width: 50%;
+            
+           
+           
+            
+        }
         .showData{
+            padding-top: 20px;
             display: flex !important;
             flex-direction: column;
         
-            height:455px ;
+            height:355px ;
           color: #ffffff;
             align-content: center;
-            justify-content: center;
+            justify-content: flex-start;
             position:absolute;
-            background-color: gray;
-            top: 60px;
+            background-color: rgb(245, 159, 10);
+            top: 62px;
             left: 0;
-            width: 50%;
-            padding-right: 16px;
+           
+            width: 40%;
             gap: 16px;
-            transition: all 3 s ease;
+            transition: all 1s ease;
+        }
+        .dreem{
+            display: none;
+
         }
     
         
