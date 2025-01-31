@@ -12,5 +12,5 @@ const bar=document.getElementById('menu')
         console.log(bar);
         
     })
-    alert('thank to pick my website. for further process please press OK.')
+   
 
